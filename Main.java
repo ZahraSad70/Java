@@ -4,7 +4,7 @@ public class Main {
         int num;
         int ret;
         Scanner reader=new Scanner(System.in);
-        System.out.print("Enter Number : ");
+        System.out.print("Enter Number :");
         num=reader.nextInt();
         ret=fact(num);
         System.out.println("Answer is : " + ret);
