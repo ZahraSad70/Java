@@ -1,48 +1,63 @@
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         int num;
-        int ret;
+        String txt;
+        txt="Hello I like this Company!";
+        String[] Arraytxt;
+        Arraytxt=txt.split(" ");
+        int lenWord = len(Arraytxt);
+        System.out.printf("your sentence was :Hello I like this Company! .that the last word lenght is \n"+ lenWord +"\n");
         Scanner reader=new Scanner(System.in);
-        System.out.print("Enter Number  :");
+        System.out.print("Enter Number for Prime and Mirror :");
         num=reader.nextInt();
-        ret=fact(num);
-        System.out.println("Answer is : " + ret);
-        int[] factorial={0,1,2,3,4,5,6,7,8,9,10};
-        for (int i=0;i<factorial.length;i++){
-            System.out.println(factorial[i]);
+        Prime(num);
+        Mirror(num);
+
+}
+    public  static  void Prime(int n){
+        int flag;
+        flag=0;
+        for (int i=2;i<n;i++){
+            if(n%i==0){
+                System.out.println(n +"عدد اول نیست");
+                flag=0;
+                break;
+            }
+            else{
+                flag=1;
+            }
         }
-        System.out.println("avg is "+avg(factorial));
-
-        String txt="hello i am awsome";
-        System.out.println("the len is "+len(txt));
-
+        if (flag==1){
+            System.out.printf(n + " عدد اول است");
+        }
     }
 
-    public static int fact(int num){
-        if(num==1){
-            return num;
-        }else{
-            return  num * fact(num-1);
+    public static void Mirror(int num){
+        int  y =0;
+        int x = 0, num2;
+        num2 = num;
+        while (num > 0) {
+            x = num % 10;
+            y = y * 10 + x;
+            num = num / 10;
         }
+        if (num2 == y)
+            System.out.println("عدد متفارن است");
+        else
+            System.out.println("عدد متقارت نیست");
     }
 
-
-    public static int avg(int[] num){
-        int average=0;
-        for (int i=0;i<num.length;i++) {
-            average = num[i] + average;
-
+    public static int len(String [] txt){
+        Iterator<String> text= Arrays.stream(txt).iterator();
+        int i=0;
+        while (text.hasNext()){
+            text.next();
+            i=i+1;
         }
-        average=average/ (num.length-1);
-        return average;
-    }
-
-    public static int len(String text){
-        String[] txt=null;
-        txt=text.split(" ");
-        String t1=txt[txt.length-1];
-        int sum =t1.length();
-        return sum;
+        return txt[i-1].length();
     }
 }
