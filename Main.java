@@ -1,14 +1,15 @@
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         int num;
         String txt;
         txt="Hello I like this Company!";
-        String[] Arraytxt;
-        Arraytxt=txt.split(" ");
+        String[] Arraytxt=txt.split(" ");
         int lenWord = len(Arraytxt);
         System.out.printf("your sentence was :Hello I like this Company! .that the last word lenght is \n"+ lenWord +"\n");
         Scanner reader=new Scanner(System.in);
@@ -52,12 +53,13 @@ public class Main {
     }
 
     public static int len(String [] txt){
-        Iterator<String> text= Arrays.stream(txt).iterator();
-        int i=0;
-        while (text.hasNext()){
-            text.next();
-            i=i+1;
-        }
+//        Iterator<String> text= Arrays.stream(txt).iterator();
+//
+//        while (text.hasNext()){
+//            text.next();
+//            i=i+1;
+//        }
+        int i=txt.length;
         return txt[i-1].length();
     }
 }
