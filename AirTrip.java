@@ -60,7 +60,7 @@ public class AirTrip {
             System.out.println("ساعت پرواز شماره 101" +"\n"+ DateAir_101.toString().replace("T"," "));
         }else if (NumAir==102) {
             DateTimeFormatter date = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-            DateAir_102 = LocalDateTime.from(date.parse("2012-01-10 22:45:00"));
+            DateAir_102 = LocalDateTime.from(date.parse("2024-07-10 22:45:00"));
             System.out.println("ساعت پرواز شماره 102" +"\n"+ DateAir_102.toString().replace("T"," "));
         }else{
             System.out.println("این شماره پرواز موجود نیست");
