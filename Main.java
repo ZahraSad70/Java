@@ -13,7 +13,7 @@ public class Main {
         AirTrip person_five=new AirTrip("zahra",101);
         AirTrip.changeStatus(101,3);
         AirTrip.StaticStatusAir(101);
-        AirTrip.TimeAir(103);
+        AirTrip.TimeAir(102);
 
 
 }
