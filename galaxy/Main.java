@@ -51,6 +51,7 @@ public class Main {
                     }
                     break;
 
+
                 case "3":
                     System.out.println("Select Planet :\n");
                     for (SpecialPlanet p:galaxy.getSpecialPlanets()){
