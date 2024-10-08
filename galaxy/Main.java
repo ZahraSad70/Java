@@ -41,7 +41,8 @@ public class Main {
 
 
                 case "2":
-                    System.out.println("select galaxy...\n1.Milky Way\n2.Andromeda\n");
+                     System.out.println("select galaxy...\n1.Milky Way\n2.Andromeda\n");
+
                     String selectGalaxy1=scanner.nextLine();
                     switch (selectGalaxy1){
                         case "1":

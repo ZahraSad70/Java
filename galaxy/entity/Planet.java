@@ -3,7 +3,8 @@ package galaxy.entity;
 public abstract class Planet{
     private String name;
     private String nameGalaxy;
-    private TypePlanet typePlanet;
+    private  TypePlanet typePlanet;
+
     private int numMoon;
     private String  distanceSun;
 
