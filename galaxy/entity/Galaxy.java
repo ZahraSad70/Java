@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Galaxy {
     private String name;
-
     private  List<SpecialPlanet> specialPlanets;
 
     public Galaxy(String name) {
